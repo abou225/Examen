@@ -1,0 +1,22 @@
+<!-- investments/add_investment.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Investissement</title>
+    <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Ajouter un Investissement</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Affiche le formulaire -->
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
+</body>
+</html>
